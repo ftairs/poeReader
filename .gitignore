@@ -1,0 +1,4 @@
+config.codekit
+manifest.xml
+.codekit-cache
+.DS_Store
