@@ -54,16 +54,18 @@ a {
 	color:white;
 	height:100%;
 	left:-50%;
-
 	// margin-right: 
-
 	padding-right: 40px;
 	padding:20px;
-
 	position:fixed;
 	top:0;
 	width:50%;
 	z-index:5;
+
+	@media screen and (max-width:767px){
+		width:100%;
+	}
+	
 	.closeToc {
 
 		background: $main;
@@ -161,6 +163,10 @@ padding:20px;
 			padding:4px 0;
 			text-align: left;
 			// width: 50%;
+			@media screen and (max-width:767px){
+				font-size: 14px;
+			}
+
 		}
 		.credits {
 			font-size: 25px;
