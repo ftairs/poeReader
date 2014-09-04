@@ -2,7 +2,7 @@
 
 I made this for all the fellow lovers of Poe. There will be a larger compilation coming really soon.
 
-If you don't want to do the download thing just go to [the hosted version.](http://www.victorpfuentes.com/eapoe/)
+If you don't want to do the download thing just go to [the hosted version.](http://www.victorpfuentes.com/poereader/)
 
 ### Licensing ###
 
