@@ -62,9 +62,15 @@ jQuery(document).ready(function($) {
 	//experimental still
 ****/
 
-	$('.pageUp').click(function(event) {
-		alert('yo');
-		// $(window).animate({scrollTop : 0});
+	$('.pageUp').click(function() {
+		// alert('yo');
+		var scrollup = $(window).innerHeight();
+		$('body, html').animate({scrollTop : ($('body, html').scrollTop() - scrollup) + "px" },500);
+	});
+		$('.pageDn').click(function() {
+		// alert('yo');
+		var scrollup = $(window).height();
+		$('body, html').animate({scrollTop : ($('body, html').scrollTop() + scrollup) + "px" },500);
 	});
 
 
