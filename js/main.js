@@ -4,15 +4,29 @@ jQuery(document).ready(function($) {
 
 	// TOC
 	var tocHidden = true;
+
 	$('.closeToc').click(function(){
+
 		if (tocHidden === true) {
+			var tocWidth = $('.toc').width();
 			$('.toc').animate({"left":"0"},400);
 			tocHidden = false;
 		} else {
-			$('.toc').animate({"left":"-50%"},400);
+						var tocWidth = $('.toc').outerWidth() * -1;
+
+			$('.toc').animate({"left": ( tocWidth  + "px" ) },400);
 			tocHidden = true;
-		};
+		};	
+	
 	});
+
+	$(window).resize(function(){
+					var tocWidth = $('.toc').outerWidth() * -1;
+
+			$('.toc').css({"left": ( tocWidth  + "px" ) });
+			tocHidden = true;
+	})
+
 
 
 
@@ -49,7 +63,8 @@ jQuery(document).ready(function($) {
 ****/
 
 	$('.pageUp').click(function(event) {
-		$(window).animate({scrollTop : 0});
+		alert('yo');
+		// $(window).animate({scrollTop : 0});
 	});
 
 
