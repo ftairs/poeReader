@@ -1,4 +1,4 @@
-# Edgar Allen Poe - Collection 1 #
+# Edgar Allen Poe - Volume 1 - Raven Edition #
 
 I made this for all the fellow lovers of Poe. There will be a larger compilation coming really soon.
 
