@@ -1,7 +1,7 @@
 // color setup
 // $body:;
 // $bodyAlt:;
-$main:#F9690E;
+$main:#446CB3;
 // $mid:;
 // $dark:;
 // $darkLight:;
@@ -20,8 +20,8 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-	font-family: 'Meddon', cursive;
-	font-weight:bold;
+	// font-family: 'Meddon', cursive;
+	font-weight:bolder;
 	margin: 0.4rem;
 }
 h1 {
@@ -34,6 +34,30 @@ h2 {
 	padding:50px 0;
 			@media screen and (max-width:767px){
 		font-size: 30px;
+	}
+	position:relative;
+			// border-bottom: 1px solid $main;
+
+	&:after {
+		max-width:200px;
+		// max-width: 600px;
+		// height:2px;
+		// background:$main;
+		// line-height: 0;
+		// height:20px;
+					border-top: 1px solid $main;
+					border-bottom: 1px solid $main;
+
+		color:$main;
+		font-size: 26px;
+		margin: 30px auto 0;
+		letter-spacing: 10px;
+		content:"\f1bb \f0fc \f02d";
+		display:block;
+		font-family: FontAwesome;
+		// position: absolute;
+		// bottom:0;
+		// left:10%;
 	}
 }
 h3 {
@@ -52,24 +76,27 @@ div {
 a {
 	color:$main;
 }
+p {
+	font-family: "Open Sans";
+}
 
 // theme
 .scrollWrap {
 	max-height:100%;
 }
 .toc {
-	background: #111;
+	background: #fff;
 	color:white;
 	height:100%;
 	left:-50%;
 	// margin-right: 
-	padding-right: 40px;
-	padding:20px;
+	// padding-right: 40px;
+	padding:0;
 	position:fixed;
 	top:0;
 	width:50%;
 	z-index:5;
-	background: url(../img/paper.jpg) repeat;
+	// background: url(../img/paper.jpg) repeat;
 	color:#333;
 
 
@@ -90,14 +117,18 @@ a {
 		top:0;
 		width:50px;
 		font-size: 30px;
-			background: url(../img/wood.jpg) repeat;
+		&:hover {
+			background:$main;
+		}
+			// background: url(../img/wood.jpg) repeat;
 			// box-shadow: inset 2px 2px 4px white,  inset -2px -2px 4px black;
 			.fa-plus {
 				width:40px;
 				height:40px;
 				border-radius: 40px;
 				// background: #333;
-				box-shadow:inset 0 0  7px #000;
+				// border:1px solid white;
+				// box-shadow:inset 0 0  7px #000;
 				line-height: 40px;
 			}
 
@@ -119,30 +150,41 @@ a {
 		list-style-type: none;
 		margin:0;
 		padding:0;
-		li {				border-bottom:1px dashed #444;
-			margin:0;
+		li {				
+			// border-bottom:1px dashed #999;
+			margin:0 10px;
 
 			padding: 0;
 			a {
 				color:$main;
 				display: inline-block;
 				// font-family: 'Meddon', cursive;
+				width:100%;
+				height:100%;
 				padding:9px;
 				text-decoration: none;
 				&:hover {
-					color:white;
+					color:#313131;
 				}
 			}
 		}
 	}
+	.col-1-2 {
+		padding:10px;
+		border-top:1px solid $main;
+		font-size: 13px;
+	}
 	.col-1-2 a{
-		background: $main;
-		color:#111;
+		// background: $main;
+		color:$main;
 		display: inline-block;
+		border: 1px solid $main;
+		margin-bottom: 5px;
 		padding:10px;
 		text-decoration: none;
 		&:hover {
 			color:white;
+			background:$main;
 		}
 	}
 	p{
@@ -214,6 +256,7 @@ padding:20px 50px;
 			font-size: 25px;
 			padding:20px 0;
 			text-align: center;
+			background:red;
 		}
 		.ending {
 			font-size:120%;
@@ -221,7 +264,8 @@ padding:20px 50px;
 		}
 	}
 	.homeFrame {
-		background: url('../img/home.jpg')  no-repeat center center fixed;
+		background:#313131;
+		// background: url('../img/home.jpg')  no-repeat center center fixed;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;

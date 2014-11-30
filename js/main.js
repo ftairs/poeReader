@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
 
 
     $(".scrollWrap").niceScroll({
-        cursorcolor: "#F9690E",
+        cursorcolor: "#446CB3",
         cursorborder: "0",
         railoffsetleft: {
             top: 0,
