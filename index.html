@@ -16,7 +16,8 @@
     <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -34,32 +35,44 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="index.html">EAPOE</a></li>
-                <li>  <a class="tocLink" href="parts/vol1.html">Volume 1</a>
+                <li class="sidebar-brand"><a href="index.html">Edgar Allen Poe <br><small>Reader</small></a>
+                </li>
+                <li> <a class="tocLink" href="parts/vol1.html">Volume 1</a>
                 </li>
                 <li>
                     <a class="tocLink" href="parts/vol2.html">Volume 2</a>
                 </li>
                 <li>
                     <br/>
-                   
-                     <div class="content-fluid">
+
+                    <div class="content-fluid">
                         <div class="col-md-12 text-center">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=ftairs&repo=poeReader&type=fork&size=large" height="30" width="100" frameborder="0" scrolling="0" style="width:100px; height: 30px;" allowTransparency="true"></iframe>
-                        <br/>
-                     <a href="https://twitter.com/share" class="twitter-share-button" data-via="vpfuentes">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                       <br/>
-                                        <p>In honor of the great master of horror. If you have any ideas or thoughts let me know. Fork away.</p>
-                  
+                            <iframe src="http://ghbtns.com/github-btn.html?user=ftairs&repo=poeReader&type=fork&size=large" height="30" width="100" frameborder="0" scrolling="0" style="width:100px; height: 30px;" allowTransparency="true"></iframe>
+                            <br/>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="vpfuentes">Tweet</a>
+                            <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                            </script>
+                            <br/>
+                            <p>In honor of the great master of horror. If you have any ideas or thoughts let me know. Fork away.</p>
+
                         </div>
-             
-                     </div>
+
+                    </div>
                 </li>
             </ul>
 
             <div>
-               
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -67,26 +80,26 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-             <a href="#menu-toggle" class="btn btn-default menu-toggle"><span class="fa fa-bars"></span></a>
+                <a href="#menu-toggle" class="btn btn-default menu-toggle"><span class="fa fa-bars"></span></a>
                 <div class="row">
                     <div class="col-lg-12 content">
                         <div class="home">
                             <div>
-                                      <h1 class="text-center">
+                                <h1 class="text-center">
     
-The Works of
-Edgar Allen Poe
-<br>
-<small>
-    The Raven Edition
-</small>
-</h1>
-                        <p class="text-center">
+                                    The Works of
+                                    Edgar Allen Poe
+                                    <br>
+                                    <small>
+                                        The Raven Edition
+                                    </small>
+                                </h1>
+                                <p class="text-center">
 
-                            All that we see or seem is but a dream within a dream. - Edgar Allan Poe
-                            <br/> Special Thanks To <a href="#">ManyBooks</a> for providing the text.
-                        </p>   
-                            </div>               
+                                    All that we see or seem is but a dream within a dream. - Edgar Allan Poe
+                                    <br/> Special Thanks To <a href="#">ManyBooks</a> for providing the text.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,47 +126,38 @@ Edgar Allen Poe
 
 
     jQuery(document).ready(function($) {
-       
 
-
-        $('.tocLink').click(function(e){
+        $('.tocLink').click(function(e) {
             // alert('k')
             changePage($(this).attr('href'));
 
             return false;
             e.preventDefault();
-        
+        });
+
+        $('#page-content-wrapper').outerHeight($(window).height());
+        $('.home ').flexVerticalCenter({
+            cssAttribute: 'padding-top'
 
         });
 
-
-        $('#page-content-wrapper').outerHeight($(window).height());
-         $('.home ').flexVerticalCenter({ cssAttribute: 'padding-top' });
     });
 
-    function changePage(url){
-       $('.content').fadeOut(500, function(){
-       $(this).load( url , function(){
-        $('.content').fadeIn(500);
+    function changePage(url) {
+        $('.content').fadeOut(500, function() {
+            $(this).load(url, function() {
+                $('.content').fadeIn(500);
 
-         // $('.tocWrap ').flexVerticalCenter({ cssAttribute: 'padding-top' });
+                // $('.tocWrap ').flexVerticalCenter({ cssAttribute: 'padding-top' });
 
-$('.toc li a').on("click",function(e){
-    // alert('whoa');
-changePage($(this).attr("href"));
-    return false;
-    e.preventDefault();
-});
-
-
-
-        
-
-       })
-            
-       })
-            
-
+                $('.toc li a').on("click", function(e) {
+                    // alert('whoa');
+                    changePage($(this).attr("href"));
+                    return false;
+                    e.preventDefault();
+                });
+            })
+        })
     }
     </script>
 

@@ -65,7 +65,6 @@ a {
     margin-left: -250px;
     overflow-y: auto;
     background: #151515;
-    background: url('../img/wood2.png') center  repeat; 
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -155,7 +154,7 @@ margin:0;
 }
 
 .sidebar-nav > .sidebar-brand {
-    /*height: 65px;*/
+    height: 65px;
     font-size: 18px;
     line-height: 60px;
 }

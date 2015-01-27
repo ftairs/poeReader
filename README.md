@@ -1,10 +1,13 @@
-# Edgar Allen Poe - Volume 1 - Raven Edition #
+# Edgar Allen Poe Reader - Version 2#
 
 I made this for all the fellow lovers of Poe. There will be a larger compilation coming really soon.
 
 If you don't want to do the download thing just go to [the hosted version.](http://www.victorpfuentes.com/poereader/)
 
 Built it on [HTML5BP](http://html5boilerplate.com/) and [Simplegrid](https://github.com/ThisIsDallas/Simple-Grid). Used the wonderful [FontAwesome](http://fontawesome.io/) icon set.
+
+####*Update*
+Version 2 is a big change. The page changes work basically the same but the whole front-end is remade. It also now includes Volume 2, the main reason for the update. From now on updates of stories will be quick and easy.
 
 ### Licensing ###
 
